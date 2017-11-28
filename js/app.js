@@ -18,9 +18,23 @@ function showElem(){
 
 for(var i =0;i<naV.length;i++){
 	naV[i].addEventListener("click", showElem);
-	console.log(naV[i]);
 }
 
 /*2) to each restaurant name that will show and hide (toggle) the secret menu item for that particular restaurant.*/
 
-var cLasses = document.getElementsByClassName("name");
+var namE = document.getElementsByClassName("name");
+
+
+function showElem2(){
+	var see = this.querySelectorAll(".menu")[0];
+	if (see.style.display === "none"){
+		see.style.display = "block";
+	}else{
+		see.style.display = "none";
+	}
+
+}
+
+for(var i =0;i<namE.length;i++){
+	namE[i].addEventListener("click", showElem2);
+}
